@@ -1,0 +1,15 @@
+1clase (nombre de la marca y los modelos)
+Contrsuctor(se le pasa por parámetro el nombre de la marca)
+addmodel
+remove mode
+showmodels
+
+
+2clase (almacena los objetos de la clase anterior)
+
+contrsuctor (no se le pasa nada por parámetro) Tiene un array vacio
+comprobar si la marca ya existe en la array (onjeto)
+crear una nueva marca o añadir(objeto)
+borrar una marca(objeto)
+listar las marcas
+seleccionar una marca de la array(objeto) Devuelve los modelos de la marca

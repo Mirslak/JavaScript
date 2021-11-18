@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <a href="http://www.iesleopoldoqueipo.com" id="vinculo">Click</a>
+    <br>
+    <form name="forum" id="formulario">
+        <li>Nombre <br> <input type="text" id="campo1" ></li>
+        <li>Apellidos <br> <input type="text" id="campo2" ></li>
+    </form>
+
+    <script type="text/javascript">
+        window.onload = function(e){
+            let formulario = document.getElementById("formulario");
+            formulario.style.display = "none";
+
+            let enlace = document.getElementById("vinculo");
+            enlace.addEventListener("click",function(e){
+                formulario.style.display = "block";
+                e.preventDefault();
+            });
+        }
+
+    </script>
+</body>
+</html>

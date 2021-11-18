@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script type="text/javascript">
+     document.write("<h3>Ejemplo de Ventana Nueva</h3>");
+     let nomb = window.prompt("Nombre y apellidos: ");
+     let dia = window.prompt("Día de nacimiento: ");
+     let mes = window.prompt("Mes de nacimiento: ");
+     let anyo = window.prompt("Año de nacimiento: ");
+     document.writeln("Buenos días"+nomb+"<br>");
+     document.writeln("Tu nombre tiene "+nomb.length+" caracteres, incluidos espacios."+"<br>");
+     document.writeln("La primera letra A de tu nombre está en la posción: "+nomb.indexOf("a")+"<br>");
+     document.writeln("La última A de tu nombre está en la posción: "+nomb.lastIndexOf("a")+"<br>");
+     document.writeln("Tu nombre menos las 3 primeras letras es: "+nomb.substr(3)+"<br>");
+     document.writeln("Tu nombre todo en mayúsculas es: "+nomb.toUpperCase()+"<br>");
+     
+     //Saber la edad
+
+     fecha = new Date();
+     diaN = fecha.getDate();
+     mesN = fecha.getMonth();
+     anyoN = fecha.getYear();
+     edad = (anyoN + 1900)- anyo;
+
+        if(mesN < (mes - 1)){
+            edad -- ;
+        }
+        if (((mes -1)==mesN)&&(diaN < dia)){
+            edad --;
+        }
+        if (edad > 1900){
+            edad -=1900;
+        }
+        document.writeln("Tu edad es de "+ edad+" años<br>");
+        document.writeln("Naciste un feliz "+ dia + " del año "+anyo+"<br>");
+        document.writeln("El coseno de 180 es: "+Math.cos(180)+"<br>");    
+        document.writeln("El número mayor de (34,67,23,75,35,19) es: "+Math.max(34,67,23,75,35,19)+"<br>");
+        document.writeln("Un número al azar: "+Math.random());
+
+
+
+</script>
+
+    
+
+</body>
+</html>
