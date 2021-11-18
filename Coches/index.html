@@ -4,15 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="style.css">
     <title>Africa Olmedilla Soler</title>
 </head>
 <body>
+    
+    <div>
+
+        <header id="cabesera">
+            <h1>INVENTARIO DEL COMERCIO DE ALQUILER DE COCHES</h1>
+        </header>
+        
+        <main>
+           <!--Inventario--> 
+           <fieldset>
+               <legend>Inventario: </legend>
+               <section id="lista_marca">
+                   <h4>Marcas</h4>
+               </section>
+               <section id="lista_modelos">
+                   <h4>Modelos</h4>
+               </section>
+            </fieldset>
+            
+            <!--Edicion--> 
+            <fieldset>
+                <legend>Edición: </legend>
+                <label for="texto_marca">Marca: </label><br>
+                <input type="text" id="texto_marca"><br>
+                <button type="button" id="add_marca">Añadir</button>
+                <button type="button" id="remove_marca">Eliminar</button><br><br>
+                <label for="text_modelos">Modelos: </label><br>
+                <input type="text" id="texto_modelo"><br>
+                <button type="button" id="add_modelo">Añadir</button>
+                <button type="button" id="remove_modelo">Eliminar</button><br><br>
+            </fieldset>
+            
+            <!--Estado-->
+            <fieldset>
+                <legend>Estado: </legend>
+                <section id="estado"></section>
+                
+            </fieldset>
+            
+            <!--Logger-->
+            <fieldset>
+                <legend>Logger: </legend>
+                <section id="logger"></section>
+            </fieldset>
+        </main>
+        
+    </div>
     <script src="ClasesCoches.js"></script>
-
-    <header>
-        inventario
-    </header>
-
 </body>
 </html>

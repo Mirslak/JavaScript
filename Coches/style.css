@@ -1,0 +1,55 @@
+div{
+    box-sizing: border-box;
+    width: 900px;
+    height: 900px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    padding-top: -30px;
+    /*border: 2px solid green;*/
+    width: 80%;
+    height: 4%;
+    color: #34716D;
+    font-size: x-small;
+}
+
+main{
+    color: #34716D;
+}
+
+#lista_marca{
+    float: left;
+    border: 1px solid #34716D;
+    width: 10%;
+}
+
+#lista_modelos{
+    margin-left: 9px;
+    float: left;
+    border: 1px solid #34716D;
+    width: 10%;
+}
+h4{
+    padding: 0;
+    margin: 2px;
+}
+
+ul{
+    padding: 0;
+    margin: 2px 4px;
+}
+
+legend{
+    color: #34716D;
+}
+
+button{
+    background-color: white;
+    border: white;
+    color: #34716D;
+}
+
