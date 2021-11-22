@@ -1,4 +1,4 @@
-class Coche{
+class Marca{
 
     constructor(marca){
         this.nombre = marca;
@@ -15,7 +15,9 @@ class Coche{
         document.getElementById("lista_marca").appendChild(listaN);
     }
 
-    addModelo(nombreModelo){
+    addModelo(){
+        let nombreModelo = document.getElementById("texto_modelo").value;
+        
         if(!(this.modelos.includes(nombreModelo))){
             this.modelos.push(nombreModelo);
             
@@ -46,8 +48,8 @@ class Coche{
         }
     }
 
-    mostrarModelos(nombreModelo){
-        console.log(this.modelos);
+    mostrarModelos(){
+        //console.log(this.modelos);
 
         let mostrarM = document.createElement("p");
         mostrarM.innerHTML=this.nombre+"={"+this.modelos+"}";
@@ -56,8 +58,9 @@ class Coche{
 
 };
 
-let test = new Coche("Porsche");
-test.addModelo("718 Boxter");
+
+let test = new Marca("Porsche");
+/*test.addModelo("718 Boxter");
 test.addModelo("18 Cayman");
 test.addModelo("911");
 test.addModelo("918");
@@ -66,7 +69,7 @@ test.addModelo("cayman");
 test.addModelo("Macan");
 test.addModelo("Panasera");
 
-test.mostrarModelos("Porshe");
+test.mostrarModelos("Porshe");*/
 
 let test2 = new Coche("Ferrary");
 let test3 = new Coche("Ford");

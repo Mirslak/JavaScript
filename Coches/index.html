@@ -32,11 +32,11 @@
                 <legend>Edición: </legend>
                 <label for="texto_marca">Marca: </label><br>
                 <input type="text" id="texto_marca"><br>
-                <button type="button" id="add_marca">Añadir</button>
+                <button   type="button" id="add_marca">Añadir</button>
                 <button type="button" id="remove_marca">Eliminar</button><br><br>
                 <label for="text_modelos">Modelos: </label><br>
                 <input type="text" id="texto_modelo"><br>
-                <button type="button" id="add_modelo">Añadir</button>
+                <button onclick ="test.addModelo()" type="button" id="add_modelo">Añadir</button>
                 <button type="button" id="remove_modelo">Eliminar</button><br><br>
             </fieldset>
             
@@ -51,6 +51,7 @@
             <fieldset>
                 <legend>Logger: </legend>
                 <section id="logger"></section>
+                <button onclick="test.mostrarModelos()">Actualizar</button>
             </fieldset>
         </main>
         
