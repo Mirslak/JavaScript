@@ -15,8 +15,8 @@ class Marca{
         document.getElementById("lista_marca").appendChild(listaN);
     }
 
-    addModelo(){
-        let nombreModelo = document.getElementById("texto_modelo").value;
+    addModelo(nombreModelo){
+        
         
         if(!(this.modelos.includes(nombreModelo))){
             this.modelos.push(nombreModelo);
@@ -56,9 +56,29 @@ class Marca{
         document.getElementById("logger").appendChild(mostrarM);
     }
 
+
 };
 
+class ListaMarca{
 
+    constructor(nombreMarca){
+        this.nombre = nombreMarca;
+        this.marcas = [];
+    }
+
+    addMarca
+}
+//Botones
+
+function BottonAddMo() {
+    let nModelo = document.getElementById("texto_modelo").value;
+
+
+    test.addModelo(nModelo);
+}
+
+
+let v = document.getElementById("add_modelo").addEventListener("click", BottonAddMo);
 let test = new Marca("Porsche");
 /*test.addModelo("718 Boxter");
 test.addModelo("18 Cayman");
@@ -71,10 +91,7 @@ test.addModelo("Panasera");
 
 test.mostrarModelos("Porshe");*/
 
-let test2 = new Coche("Ferrary");
-let test3 = new Coche("Ford");
-let test4 = new Coche("Seat");
-let test5 = new Coche("Renault");
+
 
 
 /*let p = document.createElement("p");
