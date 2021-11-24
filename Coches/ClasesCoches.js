@@ -1,3 +1,7 @@
+let selectMarca = "";
+let estado = document.getElementById("estado");
+let logger = document.getElementById("logger");
+
 class Marca{
 
     constructor(marca){
@@ -8,11 +12,28 @@ class Marca{
         let boton = document.createElement("button");
         let br = document.createElement("br");
         boton.innerHTML= this.nombre;
-        document.getElementById("lista_marca").appendChild(boton);
-        document.getElementById("lista_marca").appendChild(br);
+        document.getElementById("lista_modelo").appendChild(boton);
+        document.getElementById("lista_modelo").appendChild(br);
 
         let listaN = document.createElement("ul");
-        document.getElementById("lista_marca").appendChild(listaN);
+        nuevaLista.id = "lista_" +nombreMarca;
+        document.getElementById("lista_modelo").appendChild(listaN);
+
+        boton.addEventListener("click", function() {
+            let listas = document.getElementsByTagName("ul");
+
+            for (let i = 0; i < listas.length; i++) {
+                listas[i].removeAttribute("class");
+            }
+
+            listas.className = "visible";
+        })
+
+        arrayMarcas.push(this)
+        // Muestro el mensaje en el estado y actualizo el logger
+        loggerUpdate();
+        estado.innerHTML = 'Marca "<strong>' + mayuscular(this.nombre) + '"</strong> creada correctamente';
+
     }
 
     addModelo(nombreModelo){
@@ -21,18 +42,13 @@ class Marca{
         if(!(this.modelos.includes(nombreModelo))){
             this.modelos.push(nombreModelo);
             
-            console.log("El modelo "+nombreModelo+" ha sido añadido.");
-
-            let addM = document.createElement("p");
-            addM.innerHTML = "El modelo "+nombreModelo+" ha sido añadido.";
-            document.getElementById("estado").appendChild(addM);
-        }else{
-            console.log("El modelo "+nombreModelo+" no ha podido ser añadido.");
-
-            let addMF = document.createElement("p");
-            addMF.innerHTML="El modelo "+nombreModelo+" no ha podido ser añadido. "
-            document.getElementById("estado").appendChild(addMF);
+            let modelo = document.createElement("li");
+            modelo.innerHTML = nombreModelo;
+            modelo.id = nombreMarca + "_" + nombreModelo;
+            document.getElementById("lista_" + nombreMarca).appendChild(modelo);
             
+            loggerUpdate();
+            estado.innerHTML = 'Modelo "<strong>' + nombreModelo + '"</strong>  de <strong>"' + nombreMarca + '"</strong> creado correctamente';
         }
        
     }
@@ -55,31 +71,12 @@ class Marca{
         mostrarM.innerHTML=this.nombre+"={"+this.modelos+"}";
         document.getElementById("logger").appendChild(mostrarM);
     }
-
-
+    
 };
 
-class ListaMarca{
 
-    constructor(nombreMarca){
-        this.nombre = nombreMarca;
-        this.marcas = [];
-    }
+    let arrayMarcas = new Array();
 
-    addMarca
-}
-//Botones
-
-function BottonAddMo() {
-    let nModelo = document.getElementById("texto_modelo").value;
-
-
-    test.addModelo(nModelo);
-}
-
-
-let v = document.getElementById("add_modelo").addEventListener("click", BottonAddMo);
-let test = new Marca("Porsche");
 /*test.addModelo("718 Boxter");
 test.addModelo("18 Cayman");
 test.addModelo("911");
