@@ -1,23 +1,32 @@
+//Defino lasvariables globales que utilizaré.
+
 let selectMarca = "";
 let estado = document.getElementById("estado");
 let logger = document.getElementById("logger");
 
+//la clase 
 class Marca{
 
     constructor(marca){
         this.nombre = marca;
         this.modelos = [];
 
-        //Lista de marcas
+        //Las listas que contendrán los botones de los
+        //diferentes modelos y marcas
+
+
+        /*(Disclamer: No me ha dado tiempo a solucionar este problema visual
+            ya que la lista no aparece correctamente en el CSS) */
         let boton = document.createElement("button");
         let br = document.createElement("br");
+        boton.id = "boton_" + this.nombre;              //crea un nuevo nombre para la array
         boton.innerHTML= this.nombre;
-        document.getElementById("lista_modelo").appendChild(boton);
-        document.getElementById("lista_modelo").appendChild(br);
+        document.getElementById("lista_marca").appendChild(boton);
+        document.getElementById("lista_marca").appendChild(br);
 
         let listaN = document.createElement("ul");
-        nuevaLista.id = "lista_" +nombreMarca;
-        document.getElementById("lista_modelo").appendChild(listaN);
+        listaN.id = "lista_" +marca;                    //Crea un nuevo nombre para la array
+        document.getElementById("lista_marca").appendChild(listaN);
 
         boton.addEventListener("click", function() {
             let listas = document.getElementsByTagName("ul");
@@ -27,15 +36,19 @@ class Marca{
             }
 
             listas.className = "visible";
+
+            selectMarca = this.nombre;
         })
 
+        //meto los nuevos elementos en el array
         arrayMarcas.push(this)
         // Muestro el mensaje en el estado y actualizo el logger
         loggerUpdate();
-        estado.innerHTML = 'Marca "<strong>' + mayuscular(this.nombre) + '"</strong> creada correctamente';
+        estado.innerHTML = 'Marca "<strong>' + this.nombre + '"</strong> creada correctamente';
 
     }
 
+    //Funcion que añade un nuevo modelo a la marca
     addModelo(nombreModelo){
         
         
@@ -44,15 +57,28 @@ class Marca{
             
             let modelo = document.createElement("li");
             modelo.innerHTML = nombreModelo;
-            modelo.id = nombreMarca + "_" + nombreModelo;
-            document.getElementById("lista_" + nombreMarca).appendChild(modelo);
+            modelo.id = this.nombre + "_" + nombreModelo;
+            document.getElementById("lista_" + this.nombre).appendChild(modelo);
             
             loggerUpdate();
-            estado.innerHTML = 'Modelo "<strong>' + nombreModelo + '"</strong>  de <strong>"' + nombreMarca + '"</strong> creado correctamente';
+            estado.innerHTML = 'Modelo "<strong>' + nombreModelo + '"</strong>  de <strong>"' + this.nombre + '"</strong> creado correctamente';
         }
        
     }
 
+    //Funcion que muestra los modelos en el logger
+    listarModelos() {
+        let string = "";
+        
+        this.modelos.forEach(modelo => {
+            modelo = modelo;
+            string += modelo + " - ";
+        })
+        
+        return string.slice(0,-2)
+    }
+
+    //Eliminas modelos de la marca
     eliminarModelo(nombreModelo){
         if(this.modelos.includes(nombreModelo)){
             let index = this.modelos.indexOf(nombreModelo);
@@ -64,35 +90,10 @@ class Marca{
         }
     }
 
-    mostrarModelos(){
-        //console.log(this.modelos);
 
-        let mostrarM = document.createElement("p");
-        mostrarM.innerHTML=this.nombre+"={"+this.modelos+"}";
-        document.getElementById("logger").appendChild(mostrarM);
-    }
     
 };
 
-
+    //Creo la array de marcas
     let arrayMarcas = new Array();
 
-/*test.addModelo("718 Boxter");
-test.addModelo("18 Cayman");
-test.addModelo("911");
-test.addModelo("918");
-test.addModelo("Cayene");
-test.addModelo("cayman");
-test.addModelo("Macan");
-test.addModelo("Panasera");
-
-test.mostrarModelos("Porshe");*/
-
-
-
-
-/*let p = document.createElement("p");
-
-p.innerHTML="Hola buenas tardes";
-
-document.getElementById("cabesera").appendChild(p);*/

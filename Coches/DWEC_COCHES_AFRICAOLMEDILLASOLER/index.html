@@ -19,11 +19,17 @@
            <!--Inventario--> 
            <fieldset>
                <legend>Inventario: </legend>
-               <section id="lista_marca">
+               <section id="marcas">
                    <h4>Marcas</h4>
+                   <div id="lista_marca">
+
+                   </div>
                </section>
-               <section id="lista_modelos">
+               <section id="modelos">
                    <h4>Modelos</h4>
+                   <div id="lista_modelos">
+
+                   </div>
                </section>
             </fieldset>
             
@@ -34,7 +40,7 @@
                 <input type="text" id="texto_marca"><br>
                 <button   type="button" id="add_marca">Añadir</button>
                 <button type="button" id="remove_marca">Eliminar</button><br><br>
-                <label for="text_modelos">Modelos: </label><br>
+                <label for="text_modelo">Modelos: </label><br>
                 <input type="text" id="texto_modelo"><br>
                 <button  type="button" id="add_modelo">Añadir</button>
                 <button type="button" id="remove_modelo">Eliminar</button><br><br>
@@ -51,13 +57,12 @@
             <fieldset>
                 <legend>Logger: </legend>
                 <section id="logger"></section>
-                <button onclick="test.mostrarModelos()">Actualizar</button>
             </fieldset>
         </main>
         
     </div>
     <script src="ClasesCoches.js"></script>
     <script src="funciones.js"></script>
-    <script src="datos.js"></script>
+   <script src="datos.js"></script>  <!--Aquí están los datos básicos-->
 </body>
 </html>

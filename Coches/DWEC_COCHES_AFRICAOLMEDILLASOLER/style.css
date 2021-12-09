@@ -10,6 +10,7 @@ div{
 
 header{
     padding-top: -30px;
+
     /*border: 2px solid green;*/
     width: 80%;
     height: 4%;
@@ -21,18 +22,36 @@ main{
     color: #34716D;
 }
 
+#marcas, #modelos {
+    padding: 2px;
+    border: 1px #1E6769 solid;
+
+    display: inline-block;
+}
+
+
+#marcas button {
+    display: block;
+    
+}
+
 #lista_marca{
-    float: left;
+    height: 0px;
     border: 1px solid #34716D;
     width: 10%;
+
+    display: inline-block;
 }
 
 #lista_modelos{
-    margin-left: 9px;
     float: left;
+    height: 0;
     border: 1px solid #34716D;
-    width: 10%;
+    width: 50px;
+
+    
 }
+
 h4{
     padding: 0;
     margin: 2px;
@@ -51,5 +70,9 @@ button{
     background-color: white;
     border:1px solid pink;
     color: #34716D;
+}
+
+.visible {
+    display: block;
 }
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title></title>
+</head>
+<body>
+
+    <section>
+        <fieldset>
+            <legend>Inventario</legend>
+            <div id="invMarcas">
+                <h3>Marcas</h3>
+                <div id="lista_marcas">                    
+                </div>
+            </div>
+            <div id="invModelos">
+                <h3>Modelos</h3>
+            </div>
+        </fieldset>
+    </section>
+
+    <section>
+        <fieldset>
+            <legend>Edición</legend>
+            <label for="inputMarca">Marca:</label><br>
+            <input type="text" name="inputMarca" id="inputMarca" value=""><br>
+            <button id="bAnyadirMarca">Añadir</button>
+            <button id="bEliminarMarca">Eliminar</button><br> <br>
+            
+            <label for="inputModelo">Modelo:</label><br>
+            <input type="text" name="inputModelo" id="inputModelo" value=""><br>
+            <button id="bAnyadirModelo">Añadir</button>
+            <button id="bEliminarModelo">Eliminar</button><br> <br>
+        </fieldset>
+    </section>
+
+    <section>
+        <fieldset>
+            <legend>Estado</legend>
+            <p id="estado"></p>
+        </fieldset>
+    </section>
+
+    <section>
+        <fieldset>
+            <legend>Logger</legend>
+            <p><span class="azul">var </span><span class="verde">coches </span><span class="negro">= </span><span id="logger"></span></p>
+        </fieldset>
+    </section>
+
+
+    <script src="funciones.js"></script>
+    <script src="claseMarca.js"></script>
+    <script src="datos.js"></script>
+</body>
+</html>

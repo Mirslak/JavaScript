@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    color: #1E6769;
+}
+
+#invMarcas, #invModelos {
+    float: left;
+    padding: 2px;
+    border: 1px #1E6769 solid;
+}
+
+#invModelos {
+    float: left;
+    padding: 2px
+}
+
+#invMarcas button {
+    display: block;
+    width: 100%;
+    
+}
+
+button {
+    border: 0;
+    background-color: white;
+    text-align: left;
+}
+
+button:hover {
+    border: 0;
+    background-color: rgb(209, 209, 209);
+    text-align: left;
+}
+
+#estado, #estado strong {
+    color: rgb(49, 23, 133)
+}
+
+
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.verde {
+    color: green;
+}
+
+.azul {
+    color: blue
+}
+
+#logger {
+    color: black;
+}
