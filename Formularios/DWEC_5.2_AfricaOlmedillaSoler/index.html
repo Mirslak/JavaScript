@@ -4,39 +4,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.css">
     <title>Africa Olmedilla Soler</title>
+    <style>
+        *{
+            margin: 10;
+            padding: 10;
+            box-sizing: border-box;
+        }
+
+        body{
+
+            background-image: url(IMG_0305.PNG);
+            background-position: center center; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+           
+        }
+        .contenedor{
+            
+            display: grid;
+            grid-template-columns: 2fr 2.5fr;
+            grid-template-rows: .2fr 3fr 1fr;
+            
+            margin: auto;
+            margin-top: 50px;
+
+            width: 100%;
+            height: 100%;
+
+            border-radius: 10px;
+
+            box-sizing: border-box;
+
+            text-align: center;
+            
+        }
+
+        .contenedor__formulario{
+            border-radius: 20px;
+            grid-column-start: 2;
+            grid-row-start: 2;
+
+            
+            margin: 20px;
+            height: 500px;
+
+            background: linear-gradient(40deg, rgba(250, 184, 230, 0.979), rgb(41, 41, 160));
+        }
+
+        header{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            grid-column-start: 2;
+            grid-row-start:1;
+            grid-row-end: 2;
+            width: 100%;
+            height: 50%;
+        }
+
+        h1{
+            font-weight: bolder;
+            font-size: 50px;
+
+            color: white;
+
+            text-shadow: 2px 1px #000;
+        }
+
+        .formulario{
+
+            width: 100%;
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        input{
+            border: none;
+            height: 40px;
+            border-radius: 10px;
+
+        }
+        span{
+            display: none;
+        }
+
+        img{
+            display: none;
+        }
+
+        .Genero{
+            width: 70%;
+            border-radius: 10px;
+
+            margin: auto;
+        }
+
+        .enviar{
+            margin: auto;
+            width: 80%;
+            height: 50px;
+
+            background-color: rgb(190, 15, 103);
+            color: white;
+            font-weight: bolder;
+
+            grid-column-start: 2;
+            grid-row-start: 3;
+
+        }
+
+        footer{
+            position: absolute;
+            width: 100%;
+            height: 40px;
+            
+        }
+    
+        /*Color*/
+        
+    </style>
 </head>
 <body>
+    
     <div class="contenedor">
-        <header class="contenedor__header">
-            <h1>Formulario</h1>
+        <header>
+            <h1>¡Aquí comienza tu aventura!</h1>
         </header>
-
-        <main class="contenedor__main">
-            <label>Nombre: <input type="text" id="nombre"></label> <span id="errorNombre">❌</span> <br>
-            <label>Apellido: <input type="text" id="apellido"></label> <span id="errorApellido">❌</span> <br>
-            <label>Teléfono: <input type="text" id="telefono"></label><span id="errorTelefono">❌</span> <br>
-            <label>Email: <input type="text" id="email"></label><span id="errorEmail">❌</span> <br>
-            <label>Contraseña: <input type="text" id="contrasena"></label><span id="errorContrasena">❌</span> <br>
-            <label>Nacionalidad: <select name="nacionalidad" id="nacionalidad">
-                <option value="1">España</option>
-                <option value="2">Otro</option>
-            </select><br></label>
-            <label>Fecha de nacimiento: <input type="date" name="fNacimiento" id="fNacimiento"><br></label>
-            <label>Sexo: <br></label>
-            <input type="radio" value="Mujer" id="mujer"> Mujer <br>
-            <input type="radio" value="Hombre" id="hombre"> Hombre<br>
-
-           <input type="submit" value="Enviar">
-
-           <button id="loliB">Púlsame</button>
-           <script src="script.js"></script>
-        </main>
+        <div class="contenedor__formulario">
+            <main class="contenedor__main">
+                <label class="formulario">Usuario: <input type="text" id="nombre" placeholder="AfricaOlmsol"></label> <span id="errorNombre">❌</span> <br>
+                <label class="formulario" >Email: <input type="text" id="email" placeholder="Africa@correo.com"></label><span id="errorEmail">❌</span> <br>
+                <label class="formulario">Contraseña: <input type="text" id="contrasena"></label><span id="errorContrasena">❌</span> <br>
+                <label class="formulario">Fecha de nacimiento: <input type="date" name="fNacimiento" id="fNacimiento"><br></label>
+                <label>Sexo: <br></label>
+            <div class="Genero">
+                <input type="radio" value="Mujer" id="mujer"> Mujer <br>
+                <input type="radio" value="Hombre" id="hombre"> Hombre<br>
+                <input type="radio" value="otro" id="otro"> Otro<br>
+                </div>   
+            </main>
+        </div>
+        <br> <input type="submit" value="¡Comencemos!" class="enviar">
     </div>
 
-    <div class="loli">
-        <img src="formulario completado.gif" id="loliImag">
-    </div>
+   
 </body>
 </html>
