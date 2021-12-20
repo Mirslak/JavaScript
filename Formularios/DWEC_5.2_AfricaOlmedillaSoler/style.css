@@ -2,59 +2,16 @@
     margin: 10;
     padding: 10;
     box-sizing: border-box;
+
+    border: 1px solid ye
 }
 
-.contenedor{
+body{
 
-    margin: auto;
-
-    width: 600px;
-    height: 400px;
-
-    border-radius: 10px;
-
-    box-sizing: border-box;
-
-    text-align: center;
-    
-}
-
-.contenedor__header{
-    border: 1px dashed pink;
-    border-radius: 10px;
-
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-    color: antiquewhite;
-}
-
-span{
-    display: none;
-}
-
-img{
-    display: none;
-}
-
-.visible{
-    display: inline;
-}
-
-.loli{
-    display: inline;
-    
-    border: 3px solid pink;
-    text-align: center;
-
-    margin: auto;
-
-    margin-top: 20px;
-    padding: 1px;
-
-    width: 250px;
-    height: 298px;
-}
-/*Color*/
-.contenedor{
-    background-color: rgb(182, 221, 215);
+    background-image: url(IMG_0305.PNG);
+    background-position: center center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+   
 }

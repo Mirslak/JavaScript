@@ -1,9 +1,10 @@
 * {
 	box-sizing: border-box;
+	font-family: fantasy;
 }
 
 body {
-	font-family: 'Roboto', sans-serif;
+	
 	background: #E5E5E5;
 }
 
