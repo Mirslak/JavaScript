@@ -93,8 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
     }
+
+    //Limpia la array
     cardsChosen = []
     cardsChosenId = []
+
+    
     resultDisplay.textContent = cardsWon.length
     if  (cardsWon.length === cardArray.length/2) {
       resultDisplay.textContent = 'Congratulations! You found them all!'
