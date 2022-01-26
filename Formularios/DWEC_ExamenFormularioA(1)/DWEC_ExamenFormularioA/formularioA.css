@@ -1,0 +1,30 @@
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+input {
+	background-color: #c4bebf;
+}
+
+input[type="button"]{
+	background-color: #1692cc;
+	color: white;
+}
+
+div.centrar {
+	display: flex;
+	justify-content: center;
+}
+
+hr {
+	margin: 0.8em 0 .8em 0;
+	
+}
+.enLinea {
+	display: inline;
+}
+
+footer {
+	background-color: #c4bebf;
+}
